@@ -1,0 +1,36 @@
+<form action="/user/signupFinal" method="post" class="form-signin">
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+    <h5 class="form-signin-heading">FOR STUDENTS BY STUDENTS </h5>
+    <p>DUOMENŲ PATIKRINIMAS</p>
+    <div class="grey">
+        <p class="tl">Rodomas vardas: {{username}}</p>
+        <p class="l">Elektroninis paštas: {{email}}</p>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sveikiname!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Sveikiname! Jūs sekmingai užsiregistravote!</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block btn-square" value="Prisijungti"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--<p class="toppad"><input type="submit" class="btn btn-lg btn-primary btn-block btn-square" value="REGISTRUOTIS"></p>-->
+    <p class="toppad"><input type="button" class="btn btn-lg btn-primary btn-block btn-square" value="REGISTRUOTIS"
+                             data-toggle="modal" data-target="#myModal"></p>
+    <p><input type="button" class="btn btn-lg btn-primary btn-block btn-square" value="ATŠAUKTI"></p>
+
+</form>

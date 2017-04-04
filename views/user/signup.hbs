@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{#each messages }}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+        {{/if}}
+        <form action="/user/signup" method="post">
+            <h5 class="form-signin-heading">FOR STUDENTS BY STUDENTS </h5>
+            <h3>ASMENS DUOMENYS</h3>
+                <label for="email"></label>
+                <input type="text" id="email" placeholder="Elektroninis paštas" name="email" class="form-control">
+                <label for="username"></label>
+                <input type="text" id="username" placeholder="Rodomas vardas" name="showname" class="form-control">
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="Slaptažodis" name="password" class="form-control">
+                <label for="passwordRepeat"></label>
+                <input type="password" id="passwordRepeat" placeholder="Pakartokite slaptažodį" name="passwordRepeat" class="form-control">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+            <p>__________________________________________</p>
+            <button type="submit" class="btn btn-primary col-sm-6 col-md-12 btn-square">TĘSTI</button>
+        </form>
+    </div>
+</div>

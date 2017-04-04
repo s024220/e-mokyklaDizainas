@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="form-signin" role="form" action="/user/signin" method="post">
+        <h5 class="form-signin-heading">FOR STUDENTS BY STUDENTS </h5>
+        <p> </p>
+        {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{#each messages }}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+
+        <input type="submit" value="PRISIJUNGTI" id="login" class="btn btn-lg btn-primary btn-block btn-square"/>
+        <p></p>
+        <button type="button" class="btn btn-link btn-block">Problemos prisijungiant ?</button>
+        <p> ___________________________________________</p>
+
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+    </form>
+    <form style="padding-top: 0px" class="form-signin" action="/user/signup">
+        <button style="background: lightgrey" type="submit" class="btn btn-lg btn-default btn-block btn-square">REGISTRUOTIS</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+
+
+<!--<h1> Your ID is {{ id }}</h1>-->
+<form action="/user/profile" method="post">
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+    <input type="hidden" name="_method" value="PUT">
+    <table width="100%" class="non">
+        <tr>
+            <td width="30%">
+                <h2> {{ username }} </h2>
+                <p><a href="" class="disabled">Keisti vardą</a></p>
+                <p><a href="">Keisti slaptažodį</a></p>
+            </td>
+            <td>
+                <p class="name">PAKEISTI VARDĄ</p>
+                <div class="form-group">
+                    <input type="text" name="showname" id="newUsername" value="{{ username }}" class="form-control usname">
+                </div>
+                <p> Dėl saugumo sumetimų vardą galite keisti tik vieną kartą per dieną</p>
+
+                <p style="padding-left: 40%"><input type="submit" class="btn btn-primary col-md-6 btn-square" value="KEISTI"></p>
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+<!--<a href="/user/updateProfile"> Update username</a>-->

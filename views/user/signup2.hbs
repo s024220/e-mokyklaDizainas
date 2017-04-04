@@ -1,0 +1,17 @@
+<form action="/user/signup2" method="post" class="form-signin">
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+    <input type="hidden" name="_method" value="PUT">
+
+    <h5 class="form-signin-heading">FOR STUDENTS BY STUDENTS </h5>
+    <p></p>
+    <p class="center">PASKYROS TIPAS</p>
+    <p class="toppad"><input type="radio" id="student" name="choice" onchange="uncheck()" autocomplete="off"> Studentas
+    </p>
+    <p class="smfnt">Paskyra, skirta studentams kurie nori mokytis ir būti įvertinti</p>
+    <p class="toppad"><input type="radio" id="teacher" name="choice" onchange="check()" autocomplete="off"> Dėstytojas
+    </p>
+    <p class="smfnt">Paskyra su dėstytojo tipu, privalo kūrti programinės įrangos</p>
+    <input type="text" id="hidden-button" name="isTeacher" autocomplete="off" value="true">
+
+    <p class="toppad"><input type="submit" class="btn btn-lg btn-primary btn-block btn-square" value="TĘSTI"></p>
+</form>
